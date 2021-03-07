@@ -1,0 +1,11 @@
+*{
+	box-sizing: border-box;
+}
+[data-title]{
+	color: red;
+}
+
+.container.box{
+	box-shadow: 1px 10px 10px 0 rgba(0,0,0,0.5);
+	padding: 100px 30px;
+}

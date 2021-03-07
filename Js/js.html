@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+	<title>document</title>
+	<form>
+		<input type="button" value="comment" onclick="showComment()">
+		
+		<div id="goto">Xin chào</div>
+	</form>
+
+	<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v9.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="102016035203869"
+  theme_color="#ff7e29"
+  logged_in_greeting="Xin chào! Chúng tôi có thể giúp gì cho bạn?"
+  logged_out_greeting="Xin chào! Chúng tôi có thể giúp gì cho bạn?">
+      </div>
+</body>
+
+
+
+<script type="text/javascript">
+	// let job = 'worker';
+
+	// switch(job){
+	// 	case 'designer': console.log("la designer");
+	// 		break;
+	// 	case 'worker': console.log("la worker");
+	// 		break;
+	// 	case 'teacher': console.log("la teacher");
+	// 		break;
+	// 	default: console.log("lam tu do");
+	// 		break;
+	// }
+
+	// let age = 20;
+
+	// switch(true){
+	// 	case age<=13: console.log("thieu nien");
+	// 		break;
+	// 	case age>13 && age<=18: console.log("thieu thieu nien");
+	// 		break;
+	// 	default: console.log("thanh nien");
+	// 		break;
+	// }
+
+	// let height = 0;
+	// if(height || height===0){
+	// 	console.log("height co gia tri");
+	// }
+	// else{
+	// 	console.log("height khong co gia tri");
+	// }
+
+	// height = 10;
+	// if(height == '10'){
+	// 	console.log("dung")
+	// }
+	// else{
+	// 	console.log("sai")
+	// }
+
+	let scoreJohn = (89+120+103)/3;
+	let scoreMark = (116+94+123)/3;
+	let scoreMary = (97+134+105)/3;
+	console.log(scoreJohn, scoreMark, scoreMary)
+
+	scoreMary=scoreMark=scoreJohn=10;
+
+	if(scoreJohn>scoreMark && scoreJohn>scoreMary){
+		console.log("John thang", scoreJohn)
+	}
+	else if(scoreMark>scoreJohn && scoreMark>scoreMary){
+		console.log("Mark thang", scoreMark)
+	}
+	else if(scoreJohn===scoreMark && scoreJohn===scoreMary){
+		console.log("ca 3 hoa nhau")
+	}
+	else if(scoreMary===scoreJohn){
+		console.log("Mary va John hoa nhau")
+	}
+	else if(scoreJohn===scoreMark){
+		console.log("John va Mark hoa nhau")
+	}
+	else if(scoreMary===scoreMark){
+		console.log("Mary va Mark hoa nhau")
+	}
+	else{
+		console.log("Mary thang", scoreMary)
+	}
+
+	let obj = {
+		name: 'John',
+		score: 120,
+	}
+	const score = [
+		{name: 'John', score: 100, ap: 10},
+		{name: 'Mary', score: 110, ap:20},
+		{name: 'Mark', score: 120}
+	]
+
+	let scoreMax = score[0]
+	score.forEach(function print(item){
+		if(item['score']>scoreMax['score']){
+			console.log("diem", item)
+			scoreMax=item;
+		}
+	});
+	console.log("Nguoi thang la", scoreMax['name'], "voi so diem", scoreMax['score'])
+
+</script>
+</html>
